@@ -16,15 +16,16 @@
     <title>Mockup Nodin</title>
     <!--REQUIRED STYLE SHEETS-->
     <!-- BOOTSTRAP CORE STYLE CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONTAWESOME STYLE CSS -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-    <!--ANIMATED FONTAWESOME STYLE CSS -->
-    <link href="assets/css/font-awesome-animation.css" rel="stylesheet" />
-       <!-- CUSTOM STYLE CSS -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<!-- Paper Dashboard -->
+	<link href="assets/css/paper-dashboard.css" rel="stylesheet" />
+	<link href="assets/css/themify-icons.css" rel="stylesheet" />
+	<link href="assets/css/animate.min.css" rel="stylesheet" />
+	<link href="assets/css/demo.css" rel="stylesheet" />
+
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	
 	<!-- Latest compiled and minified CSS -->
@@ -132,34 +133,47 @@
 	</script>
 </head>
 <body >
-	
+<div class="wrapper">
 	<!-- NAV SECTION -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">MockUp</a>
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#" class="simple-text">
+                    Broadband Reference Configuration
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#nodin-sec">Nodin</a></li>
-                    <li><a href="#mapping-sec">Mapping</a></li>
-                </ul>
-            </div>
-           
-        </div>
+            <ul class="nav">
+                <li class="active">
+                    <a href="#">
+                        <i class="ti-panel"></i>
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="table.html">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Table List</p>
+                    </a>
+                </li>
+            </ul>
+    	</div>
     </div>
-     <!--END NAV SECTION -->
 
-    <!--NODIN SECTION-->
-    <section  id="nodin-sec">
-        <div class="container">
-            <div class="row">
-                <h1>Nodin Input</h1>
+	<div class="main-panel">	
+     <!--END NAV SECTION -->
+    <div class="content">
+    <div class="container-fluid">
+	<div class="nav-tabs-navigation">
+		<div class="nav-tabs-wrapper">
+			<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+				<li class="active"><a href="#nodin" data-toggle="tab">Nodin</a></li>
+				<li><a href="#mapping" data-toggle="tab">Mapping</a></li>    
+			</ul>
+		</div>
+	</div>
+	<div id="my-tab-content" class="tab-content text-center">
+		<div class="tab-pane active" id="nodin">
+			<h1>Nodin Input</h1>
 					<div class="col-md-12 g-pad-bottom">
 					</div>
                 <div class="col-md-6">
@@ -173,7 +187,7 @@
 									</div>
                                 </div>
                                 <div class="form-group">
-									<b>Price Split *</b>
+									<b>Price Split * (e.g. 50|50)</b>
                                     <div class="form-group">
 										<input name="split" id="split" required="required" class="form-control" placeholder=""></input>
 									</div>
@@ -301,16 +315,9 @@
 						</div> -->
 					</div>
 				</div>
-            </div>
-        </div>
-    </section>
-    <!--END CONTACT SECTION-->
-
-	 <!--MAPPING SECTION-->
-    <section  id="mapping-sec">
-        <div class="container">
-            <div class="row">
-                <h1>Mapping</h1>
+		</div>
+		<div class="tab-pane" id="mapping">
+			<h1>Mapping</h1>
 					<div class="col-md-12 g-pad-bottom">
 					</div>
                 <div class="col-md-12">
@@ -362,34 +369,17 @@
                         </div>
                     </form>
 				</div>
-			</div>
 		</div>
-	</section>
-	<!--END MAPPING SECTION-->
-	
-    <!-- SOCIAL STATS SECTION-->
-    <section>
-        <div class="container">
-            
-        </div>
-    </section>
-    <!-- END SOCIAL STATS SECTION-->
-
-    <!--FOOTER SECTION -->
-    <div id="footer">
-        2017 | CESE - PSM 
-         
-    </div>
-    <!-- END FOOTER SECTION -->
-
+	</div>
+	</div>	
+	</div>
+	</div>
+</div>
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
     <script src="assets/plugins/jquery-1.10.2.js"></script>
     <!-- BOOTSTRAP CORE SCRIPT   -->
     <script src="assets/plugins/bootstrap.js"></script>
-  
-    <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
 
 </body>
 </html>
